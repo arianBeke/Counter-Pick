@@ -11,15 +11,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/pages/Hero/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Hero/page.js"
+    ],
     "/pages/Tank/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Tank/page.js"
     ],
-    "/pages/Hero/page": [
+    "/pages/Damage/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/Hero/page.js"
+      "static/chunks/app/pages/Damage/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

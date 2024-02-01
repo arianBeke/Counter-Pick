@@ -1,5 +1,5 @@
 "use client"
-import ScrollButton from "@/app/components/ScrollButton/page";
+import ScrollButton from "../../components/ScrollButton/page";
 import Navbar from "../../components/Navbar/page"
 
 const heroes = [
