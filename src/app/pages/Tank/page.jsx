@@ -88,7 +88,7 @@ const heroes = [
             className=" mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
           >
             {heroes.map((hero) => (
-              <li key={hero.name} className="rounded-2xl hover:scale-105 duration-500 cursor-pointer hover:ring-[#00df9a] hover:ring-4 bg-gray-800 px-8 py-10">
+              <li key={hero.name} className="rounded-2xl hover:scale-105 duration-500 cursor-pointer hover:ring-[#00df9a] hover:ring-4 bg-[#1D2128] px-8 py-10">
                 <img className="mx-auto h-48 w-48 ring-[#00df9a] ring-4 rounded-full md:h-56 md:w-56" src={hero.imageUrl} alt="" />
                 <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{hero.name}</h3>
                 <p className="text-sm leading-6 text-[#00df9a]">{hero.role}</p>
