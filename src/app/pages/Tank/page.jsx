@@ -1,18 +1,17 @@
 "use client"
 import Navbar from "../../components/Navbar/page"
-import ScrollButton from "@/app/components/ScrollButton/page";
 
 
 const heroes = [
     {
       name: 'D.VA',
-      role: 'Aggresive Tank',
+      role: 'Dive Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca114f72193e4d58a85c087e9409242f1a31e808cf4058678b8cbf767c2a9a0a.png',
     },
     {
       name: 'DOOMFIST',
-      role: 'Aggresive Tank',
+      role: 'Dive Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/13750471c693c1a360eb19d5ace229c8599a729cd961d72ebee0e157657b7d18.png',
     },
@@ -30,13 +29,13 @@ const heroes = [
     },
     {
       name: 'RAMATTRA',
-      role: 'Aggresive Tank',
+      role: 'Shield Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e0367155e1940a24da076c6f1f065aacede88dbc323631491aa0cd5a51e0b66.png',
     },
     {
       name: 'REINHARDT',
-      role: 'Aggresive Tank',
+      role: 'Shield Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/490d2f79f8547d6e364306af60c8184fb8024b8e55809e4cc501126109981a65.png',
     },
@@ -48,19 +47,19 @@ const heroes = [
     },
     {
       name: 'SIGMA',
-      role: 'Aggresive Tank',
+      role: 'Shield Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cd7a4c0a0df8924afb2c9f6df864ed040f20250440c36ca2eb634acf6609c5e4.png',
     },
     {
       name: 'WINSTON',
-      role: 'Aggresive Tank',
+      role: 'Dive Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd9c8e634d89488459dfc1aeb21b602fa5c39aa05601a4167682f3a3fed4e0ee.png',
     },
     {
       name: 'WRECKING BALL',
-      role: 'Aggresive Tank',
+      role: 'Dive Tank',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5c18e39ce567ee8a84078f775b9f76a2ba891de601c059a3d2b46b61ae4afb42.png',
     },
@@ -99,7 +98,6 @@ const heroes = [
             ))}
           </ul>
         </div>
-        <ScrollButton />
       </div>
       </>
     )

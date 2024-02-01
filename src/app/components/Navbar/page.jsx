@@ -12,7 +12,7 @@ const navigation = [
 ]
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
