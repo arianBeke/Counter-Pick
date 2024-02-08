@@ -2,6 +2,7 @@
 import Navbar from "../../components/Navbar/page"
 
 
+
 const heroes = [
     {
       name: 'D.VA',

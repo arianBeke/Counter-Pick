@@ -1,4 +1,4 @@
-// File: /Users/Arian/Desktop/CP/Counter-Pick-OW/src/app/page.jsx
+// File: /Users/Arian/Desktop/CounterPick/Counter-Pick-OW/src/app/page.jsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

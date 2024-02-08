@@ -3,6 +3,7 @@ import { React, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 
 const navigation = [
   { name: 'Tank', href: '../pages/Tank' },
@@ -13,6 +14,7 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -41,8 +43,14 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <p className=" cursor-pointer text-sm font-semibold leading-6 hover:text-[#00df9a] text-white">Login/Registrer <span aria-hidden="true">&rarr;</span></p>
+        <div className="hidden space-x-2 lg:flex lg:flex-1 lg:justify-end">
+          <button onClick={() => router.push('signin')} className="font-semibold leading-6 text-white hover:text-[#00df9a]">
+              Sign In
+          </button>
+          <span className="text-[#00df9a]">/</span>
+          <button onClick={() => router.push('signup')} className="font-semibold leading-6 text-white hover:text-[#00df9a]">
+              Sign Up
+          </button>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

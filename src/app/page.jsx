@@ -1,14 +1,11 @@
 import Link from 'next/link';
 
+
+
 export default function HomePage() {
   return (
     <div className=" lg:h-screen md:h-full">
       <div className="relative isolate lg:h-screen md:h-full overflow-hidden">
-        {/* <img
-          src={Overwatch}
-          alt=""
-          className="absolute opacity-10 inset-0 -z-10 h-full w-full object-cover"
-        /> */}
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -43,4 +40,8 @@ export default function HomePage() {
     </div>
   )
 }
+
+
+
+
 

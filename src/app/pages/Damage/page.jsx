@@ -2,7 +2,6 @@
 import ScrollButton from "../../components/ScrollButton/page";
 import Navbar from "../../components/Navbar/page"
 
-
 const heroes = [
   {
     name: 'ASHE',
@@ -123,3 +122,5 @@ export default function Example() {
       </>
   );
 }
+
+
