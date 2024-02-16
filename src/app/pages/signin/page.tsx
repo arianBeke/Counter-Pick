@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import { useEffect,useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
-import { redirect } from 'next/navigation';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
@@ -73,7 +72,7 @@ export default function Signin() {
             <div>
               <button
                 onClick={() => {
-                 signIn('credentials', {email, password, redirect: true, callbackUrl: "/Tank"})
+                 signIn('credentials', {email, password, redirect: true, callbackUrl: "Tank"})
                  notify();
                 }}
                 disabled={!email || !password}

@@ -1,6 +1,9 @@
 {
-  "/pages/signin/page": "app/pages/signin/page.js",
-  "/page": "app/page.js",
+  "/not-found": "app/not-found.js",
+  "/pages/Hero/page": "app/pages/Hero/page.js",
   "/pages/Tank/page": "app/pages/Tank/page.js",
-  "/pages/Hero/page": "app/pages/Hero/page.js"
+  "/pages/signin/page": "app/pages/signin/page.js",
+  "/pages/Damage/page": "app/pages/Damage/page.js",
+  "/pages/signup/page": "app/pages/signup/page.js",
+  "/pages/Support/page": "app/pages/Support/page.js"
 }
