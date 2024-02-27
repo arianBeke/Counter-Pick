@@ -10,6 +10,7 @@ export default function Signin() {
   const [password, setPassword] = useState('');
   const notify = () => toast.success("Logged in!");
   const router = useRouter();
+  
 
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Signin() {
     <>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h1 onClick={() => router.push('Damage')} className=" cursor-pointer text-center text-2xl font-bold leading-9 tracking-tight text-[#00df9a]  underline underline-offset-8">Counter Pick</h1>
+          <h1 onClick={() => router.push('/')} className=" cursor-pointer text-center text-2xl font-bold leading-9 tracking-tight text-[#00df9a]  underline underline-offset-8">Counter Pick</h1>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
             Sign in to your account
           </h2>

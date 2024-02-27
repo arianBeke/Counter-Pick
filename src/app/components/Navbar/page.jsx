@@ -1,27 +1,31 @@
-"use client";
-import { React, useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation';
+import { React, useState } from 'react'; // Add missing import for React
+import { useSession, signOut } from 'next-auth/react'; // Add missing import for useSession and signOut
+import { redirect } from 'next/navigation';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 const navigation = [
   { name: 'Tank', href: '../pages/Tank' },
   { name: 'Damage', href: '../pages/Damage' },
   { name: 'Support', href: '../pages/Support' },
   { name: 'Favorites', href: '/' },
-]
+];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const router = useRouter();
+  const session = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/pages/signin'); // Fix the function name to redirect
+    },
+  });
 
   return (
     <>
     <header className=" pl-3">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-            <span className="sr-only">Your Company</span>
             <Link href="../pages/Hero">
               <span className="w-full text-xl font-bold text-[#00df9a] cursor-pointer">Counter Pick</span>
             </Link>
@@ -43,14 +47,9 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden space-x-2 lg:flex lg:flex-1 lg:justify-end">
-          <button onClick={() => router.push('signin')} className="font-semibold leading-6 text-white hover:text-[#00df9a]">
-              Sign In
-          </button>
-          <span className="text-[#00df9a]">/</span>
-          <button onClick={() => router.push('signup')} className="font-semibold leading-6 text-white hover:text-[#00df9a]">
-              Sign Up
-          </button>
+        <div className="hidden space-x-4 lg:flex lg:flex-1 lg:justify-end">
+          <div className='text-white mt-2'>{session?.data?.user?.email}</div>
+          <button className='rounded-lg w-20 h-10 bg-[#00df9a] text-gray-700 hover:bg-gray-700 hover:text-[#00df9a] hover:duration-300' onClick={() => signOut()}>Logout</button>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -90,3 +89,5 @@ export default function Navbar() {
     </>
   )
 }
+
+Navbar.requireAuth = true

@@ -21,7 +21,7 @@ export default function HomePage() {
                 The ultimate site for learning how to counter your enemies in Overwatch!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="pages/Hero">
+              <Link href="pages/signin">
                 <button
                   className="rounded-md w-64 bg-[#00df9a] px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-gray-700 hover:text-[#00df9a] transition-colors duration-300  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
