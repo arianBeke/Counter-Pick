@@ -1,25 +1,10 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/pages/Hero/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/Hero/page.js"
-    ],
-    "/pages/Tank/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/Tank/page.js"
     ],
     "/pages/signin/page": [
       "static/chunks/webpack.js",
@@ -27,21 +12,20 @@
       "static/css/app/pages/signin/page.css",
       "static/chunks/app/pages/signin/page.js"
     ],
-    "/pages/signup/page": [
+    "/pages/Tank/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/pages/signup/page.css",
-      "static/chunks/app/pages/signup/page.js"
+      "static/chunks/app/pages/Tank/page.js"
     ],
-    "/pages/Damage/page": [
+    "/pages/Hero/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/Damage/page.js"
+      "static/chunks/app/pages/Hero/page.js"
     ],
-    "/pages/Support/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/Support/page.js"
+      "static/chunks/app/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

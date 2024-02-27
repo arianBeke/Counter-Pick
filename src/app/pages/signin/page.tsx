@@ -68,11 +68,10 @@ export default function Signin() {
                 />
               </div>
             </div>
-
             <div>
               <button
                 onClick={() => {
-                 signIn('credentials', {email, password, redirect: true, callbackUrl: "Tank"})
+                 signIn('credentials', {email, password, redirect: true, callbackUrl: "/pages/Tank"})
                  notify();
                 }}
                 disabled={!email || !password}
@@ -85,7 +84,6 @@ export default function Signin() {
               />
             </div>
           </div>
-
           <p className="mt-10 text-center text-sm text-gray-400">
             Don't have an account?{' '}
             <button onClick={() => router.push('signup')} className="font-semibold leading-6 text-[#00df9a] hover:text-white">
