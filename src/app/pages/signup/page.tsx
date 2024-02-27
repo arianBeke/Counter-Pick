@@ -1,7 +1,7 @@
 'use client';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useState } from 'react';
-import { auth } from '../firebase';
+import { auth } from '../../firebase'; // Fixed the file path for the 'auth' module
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';

@@ -3,12 +3,12 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect,useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast} from 'react-toastify';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const notify = () => toast.success("Logged in!");
+  const notify = () => toast.success("Logged in!", { autoClose: 100000, });
   const router = useRouter();
   
 
@@ -52,7 +52,7 @@ export default function Signin() {
                   Password
                 </label>
                 <div className="text-sm">
-                  <div onClick={() => router.push('/forgot-password')} className="cursor-pointer font-semibold text-[#00df9a] hover:text-white">
+                  <div onClick={() => router.push('/pages/forgot-password')} className="cursor-pointer font-semibold text-[#00df9a] hover:text-white">
                     Forgot password?
                   </div>
                 </div>
@@ -72,7 +72,7 @@ export default function Signin() {
             <div>
               <button
                 onClick={() => {
-                 signIn('credentials', {email, password, redirect: true, callbackUrl: "/pages/Tank"})
+                 signIn('credentials', {email, password, redirect: true, callbackUrl: "/pages/Hero"})
                  notify();
                 }}
                 disabled={!email || !password}

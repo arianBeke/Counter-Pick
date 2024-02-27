@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Tank', href: '../pages/Tank' },
   { name: 'Damage', href: '../pages/Damage' },
   { name: 'Support', href: '../pages/Support' },
-  { name: 'Favorites', href: '/' },
+  { name: 'Favorites', href: '../pages/Hero' },
 ];
 
 export default function Navbar() {
