@@ -6,31 +6,35 @@ const heroes = [
     {
       name: 'D.VA',
       role: 'Dive Tank',
+      pageRoute: '/pages/Heroes/Dva',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca114f72193e4d58a85c087e9409242f1a31e808cf4058678b8cbf767c2a9a0a.png',
     },
     {
       name: 'DOOMFIST',
       role: 'Dive Tank',
+      pageRoute: '/pages/Heroes/Doomfist',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/13750471c693c1a360eb19d5ace229c8599a729cd961d72ebee0e157657b7d18.png',
     },
     {
       name: 'JUNKER QUEEN',
       role: 'Aggresive Tank',
+      pageRoute: '/pages/Heroes/Dva',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cef2406b2244b80506f83b8fb9ebaf214f41fa8795cbeef84026cd8018561d04.png',
     },
     {
       name: 'ORISA',
-      pageRoute: '/tank/orisa',
       role: 'Aggresive Tank',
+      pageRoute: '/pages/Heroes/Dva',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71e96294617e81051d120b5d04b491bb1ea40e2933da44d6631aae149aac411d.png',
     },
     {
       name: 'RAMATTRA',
       role: 'Shield Tank',
+      pageRoute: '/pages/Heroes/Dva',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e0367155e1940a24da076c6f1f065aacede88dbc323631491aa0cd5a51e0b66.png',
     },
@@ -91,11 +95,13 @@ const heroes = [
           >
             {heroes.map((hero) => (
               <li key={hero.name} className="rounded-2xl hover:scale-105 duration-500 cursor-pointer hover:ring-[#00df9a] hover:ring-4 bg-[#1D2128] px-8 py-10">
-                <img className="mx-auto h-48 w-48 ring-[#00df9a] ring-4 rounded-full md:h-56 md:w-56" src={hero.imageUrl} alt="" />
-                <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{hero.name}</h3>
-                <p className="text-sm leading-6 text-[#00df9a]">{hero.role}</p>
-                <ul role="list" className="mt-6 flex justify-center gap-x-6">
-                </ul>
+                <Link href={hero.pageRoute || '/Tank/[slug]'} as={hero.pageRoute || `/Tank/${hero.name.toLowerCase()}`}>
+                  <img className="mx-auto h-48 w-48 ring-[#00df9a] ring-4 rounded-full md:h-56 md:w-56" src={hero.imageUrl} alt="" />
+                  <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{hero.name}</h3>
+                  <p className="text-sm leading-6 text-[#00df9a]">{hero.role}</p>
+                  <ul role="list" className="mt-6 flex justify-center gap-x-6">
+                  </ul>
+                </Link>
               </li>
             ))}
           </ul>

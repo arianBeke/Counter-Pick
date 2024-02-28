@@ -1,12 +1,18 @@
-import { React, useState } from 'react'; // Add missing import for React
-import { useSession, signOut } from 'next-auth/react'; // Add missing import for useSession and signOut
+import { React, useState } from 'react'; 
+import { useSession, signOut } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 const navigation = [
-  { name: 'Tank', href: '../pages/Tank' },
+  { name: 'Tank', href: '../../pages/Tank' },
+  { name: 'Damage', href: '../pages/Damage' },
+  { name: 'Support', href: '../pages/Support' },
+  { name: 'Favorites', href: '../pages/Hero' },
+];
+const mobileNavigation = [
+  { name: 'Tank', href: '../../pages/Tank' },
   { name: 'Damage', href: '../pages/Damage' },
   { name: 'Support', href: '../pages/Support' },
   { name: 'Favorites', href: '../pages/Hero' },
@@ -71,7 +77,7 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/25">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {mobileNavigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -80,6 +86,10 @@ export default function Navbar() {
                     {item.name}
                   </a>
                 ))}
+              </div>
+              <div className=" mt-60 space-y-2 flex flex-col items-center justify-center">
+                <div className='text-white mt-2'>{session?.data?.user?.email}</div>
+                <button className="rounded-lg justify-center w-20 h-10 bg-[#00df9a] text-gray-700 hover:bg-gray-700 hover:text-[#00df9a] hover:duration-300" onClick={() => signOut()}>Log Out</button>
               </div>
             </div>
           </div>
