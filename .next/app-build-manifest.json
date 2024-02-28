@@ -17,15 +17,15 @@
       "static/css/app/pages/signin/page.css",
       "static/chunks/app/pages/signin/page.js"
     ],
-    "/pages/Tank/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/Tank/page.js"
-    ],
     "/pages/Hero/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Hero/page.js"
+    ],
+    "/pages/Tank/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Tank/page.js"
     ],
     "/pages/Damage/page": [
       "static/chunks/webpack.js",
@@ -36,22 +36,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Support/page.js"
-    ],
-    "/pages/signup/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/pages/signup/page.css",
-      "static/chunks/app/pages/signup/page.js"
-    ],
-    "/pages/forgot-password/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/forgot-password/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
     ]
   }
 }

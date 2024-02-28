@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/pages/Heros/Dva/page.jsx", "src/app/pages/Tank/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]

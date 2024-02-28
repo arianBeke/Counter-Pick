@@ -17,7 +17,7 @@ export default function Navbar() {
   const session = useSession({
     required: true,
     onUnauthenticated() {
-      redirect('/pages/signin'); // Fix the function name to redirect
+      redirect('/pages/signin'); 
     },
   });
 
