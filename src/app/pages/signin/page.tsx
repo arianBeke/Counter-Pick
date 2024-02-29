@@ -15,7 +15,7 @@ export default function Signin() {
   }, []);
 
   const notifySuccess = () => toast.success("Logged in!", { autoClose: 100000 });
-  const notifyError =  () => toast.error("Login failed.", { autoClose: 3000 });
+  const notifyError =  () => toast.error("Sign in failed.", { autoClose: 3000 });
 
   const handleSignIn = async () => {
     const result = await signIn('credentials', { email, password, redirect: false });

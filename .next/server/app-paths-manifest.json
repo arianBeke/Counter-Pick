@@ -3,6 +3,5 @@
   "/pages/signin/page": "app/pages/signin/page.js",
   "/pages/Damage/page": "app/pages/Damage/page.js",
   "/pages/Hero/page": "app/pages/Hero/page.js",
-  "/pages/Heroes/Dva/page": "app/pages/Heroes/Dva/page.js",
-  "/pages/signup/page": "app/pages/signup/page.js"
+  "/pages/Heroes/Dva/page": "app/pages/Heroes/Dva/page.js"
 }
