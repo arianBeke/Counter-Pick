@@ -1,4 +1,3 @@
-"use client"
 import { React, useState } from 'react'; 
 import { useSession, signOut } from 'next-auth/react';
 import { redirect } from 'next/navigation';
@@ -8,9 +7,9 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'Tank', href: '../../pages/Tank' },
-  { name: 'Damage', href: '../pages/Damage' },
-  { name: 'Support', href: '../pages/Support' },
-  { name: 'Favorites', href: '../pages/Hero' },
+  { name: 'Damage', href: '../../pages/Damage' },
+  { name: 'Support', href: '../../pages/Support' },
+  { name: 'Favorites', href: '../../pages/Hero' },
 ];
 const mobileNavigation = [
   { name: 'Tank', href: '../../pages/Tank' },
@@ -33,7 +32,7 @@ export default function Navbar() {
     <header className=" pl-3">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-            <Link href="../pages/Hero">
+            <Link href="../../pages/Hero">
               <span className="w-full text-xl font-bold text-[#00df9a] cursor-pointer">Counter Pick</span>
             </Link>
         </div> 

@@ -41,6 +41,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Heroes/Dva/page.js"
+    ],
+    "/pages/Heroes/Doomfist/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Heroes/Doomfist/page.js"
     ]
   }
 }
