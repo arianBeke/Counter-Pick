@@ -1,3 +1,4 @@
+"use client"
 import { React, useState } from 'react'; 
 import { useSession, signOut } from 'next-auth/react';
 import { redirect } from 'next/navigation';
