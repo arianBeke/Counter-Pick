@@ -80,7 +80,6 @@ export default function Example() {
             ))}
           </ul>
         </div>
-        <ScrollButton />
       </div>
       </>    
   );

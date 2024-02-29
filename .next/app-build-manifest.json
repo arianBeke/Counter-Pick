@@ -27,16 +27,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Tank/page.js"
     ],
-    "/pages/Damage/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/Damage/page.js"
-    ],
-    "/pages/Support/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/Support/page.js"
-    ],
     "/pages/Heroes/Dva/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -46,6 +36,22 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Heroes/Doomfist/page.js"
+    ],
+    "/pages/signup/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/pages/signup/page.css",
+      "static/chunks/app/pages/signup/page.js"
+    ],
+    "/pages/Damage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Damage/page.js"
+    ],
+    "/pages/Support/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Support/page.js"
     ]
   }
 }

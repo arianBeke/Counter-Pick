@@ -1,7 +1,7 @@
 'use client';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useState } from 'react';
-import { auth } from '../../firebase'; // Fixed the file path for the 'auth' module
+import { auth } from '../../firebase'; 
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
@@ -10,9 +10,8 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordAgain, setPasswordAgain] = useState('');
-  const notify = () => toast.success("Account created successfully!");
+  const [error, setError] = useState('');
   const router = useRouter();
-
 
   const signup = () => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -20,12 +19,16 @@ export default function Signup() {
         setEmail("");
         setPassword("");
         setPasswordAgain("");
+        setError("");
+        notify(); 
       })
       .catch((error) => {
         console.error('Signup failed:', error.message);
+        setError(error.message);
       });
   };
 
+  const notify = () => toast.success("Account created successfully!");
 
   useEffect(() => {
     document.title = 'Sign Up - Counter Pick';
@@ -102,20 +105,19 @@ export default function Signup() {
               </div>
             </div>
 
+            {error && (
+              <div className="text-red-500">{error}</div>
+            )}
+
             <div>
               <button
                 disabled={(!email || !password || !passwordAgain) || (password !== passwordAgain)}
-                onClick={() => {
-                  signup();
-                  notify();
-                }}
+                onClick={signup}
                 className="disabled:opacity-40 flex w-full justify-center rounded-md duration-300 bg-[#00df9a] hover:bg-gray-700 hover:text-[#00df9a] px-3 py-1.5 text-sm font-semibold leading-6 text-gray-700 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Sign Up
               </button>
-              <ToastContainer
-              position="top-center"
-              />
+              <ToastContainer position="top-center" />
             </div>
           </div>
           <p className="mt-10 text-center text-sm text-gray-400">

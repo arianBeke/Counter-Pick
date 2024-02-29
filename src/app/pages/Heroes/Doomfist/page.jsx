@@ -17,7 +17,7 @@ const faqs = [
 const hero = [
   {
     name: 'DOOMFIST',
-    role: 'Passive/Aggresive Tank',
+    role: 'Dive Tank',
     imageUrl: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/13750471c693c1a360eb19d5ace229c8599a729cd961d72ebee0e157657b7d18.png',
   },
 ];
@@ -215,7 +215,7 @@ export default function Example() {
                         {counters.slice(1).map((counter) => (
                             <div key={counter.descriptionName} className="flex flex-col items-center mt-9">
                               <img
-                                className="mx-auto lg:h-30 lg:w-30 bg-gray-800 ring-[#00df9a] ring-4 rounded-full"
+                                className="mx-auto lg:h-30 lg:w-30 bg-[#1D2128] ring-[#00df9a] ring-4 rounded-full"
                                 src={counter.imageUrl2}
                                 alt=""
                               />
@@ -257,7 +257,7 @@ export default function Example() {
                         {counters2.slice(1).map((counters2) => (
                             <div key={counters2.descriptionName2} className="flex flex-col items-center mt-9">
                               <img
-                                className="mx-auto lg:h-30 lg:w-30 bg-gray-800 ring-[#00df9a] ring-4 rounded-full"
+                                className="mx-auto lg:h-30 lg:w-30 bg-[#1D2128] ring-[#00df9a] ring-4 rounded-full"
                                 src={counters2.imageUrl3}
                                 alt=""
                               />

@@ -1,25 +1,35 @@
-'use client';
+"use client"
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import { useEffect,useState } from 'react';
+import { useRouter } from 'next/navigation'; 
+import { useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
-import { ToastContainer, toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const notify = () => toast.success("Logged in!", { autoClose: 100000, });
   const router = useRouter();
-  
-
 
   useEffect(() => {
     document.title = 'Sign In - Counter Pick';
   }, []);
 
+  const notifySuccess = () => toast.success("Logged in!", { autoClose: 100000 });
+  const notifyError =  () => toast.error("Login failed.", { autoClose: 3000 });
+
+  const handleSignIn = async () => {
+    const result = await signIn('credentials', { email, password, redirect: false });
+    if (result?.error) {
+      notifyError(); 
+    } else {
+      notifySuccess();
+      router.push('/pages/Hero');
+    }
+  };
+
   return (
     <>
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h1 onClick={() => router.push('/')} className=" cursor-pointer text-center text-2xl font-bold leading-9 tracking-tight text-[#00df9a]  underline underline-offset-8">Counter Pick</h1>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
@@ -71,18 +81,13 @@ export default function Signin() {
             </div>
             <div>
               <button
-                onClick={() => {
-                 signIn('credentials', {email, password, redirect: true, callbackUrl: "/pages/Hero"})
-                 notify();
-                }}
+                onClick={handleSignIn}
                 disabled={!email || !password}
                 className="disabled:opacity-40 flex w-full justify-center rounded-md duration-300 bg-[#00df9a] hover:bg-gray-700 hover:text-[#00df9a] px-3 py-1.5 text-sm font-semibold leading-6 text-gray-700 shadow-sm"
               >
                 Sign in
               </button>
-              <ToastContainer
-              position="top-center"
-              />
+              <ToastContainer position="top-center" />
             </div>
           </div>
           <p className="mt-10 text-center text-sm text-gray-400">
@@ -92,12 +97,9 @@ export default function Signin() {
             </button>
           </p>
         </div>
-    </div>
+      </div>
     </>
   )
 }
-
-
-
 
 

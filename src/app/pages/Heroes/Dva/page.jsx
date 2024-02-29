@@ -20,7 +20,7 @@ const faqs = [
 const dva = [
   {
     name: 'D.VA',
-    role: 'Passive/Aggresive Tank',
+    role: 'Dive Tank',
     imageUrl: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca114f72193e4d58a85c087e9409242f1a31e808cf4058678b8cbf767c2a9a0a.png',
   },
 ];
@@ -210,7 +210,7 @@ export default function Example() {
                         {counters.slice(1).map((counter) => (
                             <div key={counter.descriptionName} className="flex flex-col items-center mt-9">
                               <img
-                                className="mx-auto lg:h-40 lg:w-40 bg-gray-800 ring-[#00df9a] ring-4 rounded-full"
+                                className="mx-auto lg:h-40 lg:w-40 bg-[#1D2128] ring-[#00df9a] ring-4 rounded-full"
                                 src={counter.imageUrl2}
                                 alt=""
                               />
@@ -250,7 +250,7 @@ export default function Example() {
                         {counters2.slice(1).map((counters2) => (
                             <div key={counters2.descriptionName2} className="flex flex-col items-center mt-9">
                               <img
-                                className="mx-auto lg:h-40 lg:w-40 bg-gray-800 ring-[#00df9a] ring-4 rounded-full"
+                                className="mx-auto lg:h-40 lg:w-40 bg-[#1D2128] ring-[#00df9a] ring-4 rounded-full"
                                 src={counters2.imageUrl3}
                                 alt=""
                               />
