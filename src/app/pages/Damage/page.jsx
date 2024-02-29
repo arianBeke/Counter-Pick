@@ -1,5 +1,4 @@
 "use client"
-import ScrollButton from "../../components/ScrollButton/page";
 import Navbar from "../../components/Navbar/page"
 
 

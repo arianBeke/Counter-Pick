@@ -1,8 +1,7 @@
 {
   "/pages/Hero/page": "app/pages/Hero/page.js",
-  "/pages/Heroes/Dva/page": "app/pages/Heroes/Dva/page.js",
-  "/pages/signin/page": "app/pages/signin/page.js",
   "/pages/Tank/page": "app/pages/Tank/page.js",
   "/pages/Support/page": "app/pages/Support/page.js",
-  "/pages/Damage/page": "app/pages/Damage/page.js"
+  "/pages/Heroes/Dva/page": "app/pages/Heroes/Dva/page.js",
+  "/pages/signin/page": "app/pages/signin/page.js"
 }
