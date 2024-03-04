@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import { auth } from "../../../src/app/firebase";
 
@@ -23,6 +24,10 @@ export const authOptions = {
           })
           .catch(error => (console.log(error)))
       }
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID || '',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
     })
   ],
 }
