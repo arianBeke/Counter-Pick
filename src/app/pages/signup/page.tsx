@@ -34,6 +34,13 @@ export default function Signup() {
     document.title = 'Sign Up - Counter Pick';
   }, []);
   
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      signup();
+    }
+  };
+
+
   return (
     <>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -99,6 +106,7 @@ export default function Signup() {
                   type="password"
                   autoComplete="current-password"
                   onChange={(e) => setPasswordAgain(e.target.value)}
+                  onKeyPress={handleKeyPress}
                   required
                   className="block bg-gray-700 w-full pl-4 rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                 />
