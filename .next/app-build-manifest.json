@@ -26,6 +26,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Tank/page.js"
+    ],
+    "/pages/Damage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/Damage/page.js"
     ]
   }
 }
