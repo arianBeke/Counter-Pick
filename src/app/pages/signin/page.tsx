@@ -4,35 +4,15 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer, toast } from 'react-toastify';
-import { FcGoogle } from "react-icons/fc";
-import { GoogleAuthProvider } from 'firebase/auth';
-import { FaGithub } from "react-icons/fa";
-import { signInWithPopup} from 'firebase/auth';
-import { auth } from '../../firebase'; // Import getAuth from firebase/auth
 
 export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
-  const provider = new GoogleAuthProvider();
-  const [isSignedIn, setIsSignedIn] = useState(false);
 
   useEffect(() => {
     document.title = 'Sign In - Counter Pick';
   }, []);
-
-  const googleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then(() => {
-        setIsSignedIn(true);
-        notifySuccess();
-        router.push('/pages/Hero');
-      })
-      .catch((error) => {
-        notifyError();
-        console.error('Google sign-in error:', error);
-      });
-  };
 
   const notifySuccess = () => toast.success("Logged in!", { autoClose: 100000 });
   const notifyError =  () => toast.error("Sign in failed.", { autoClose: 3000 });
@@ -123,10 +103,6 @@ export default function Signin() {
               Sign Up
             </button>
           </p>
-          <div className=" flex mt-5 space-x-4 justify-center">
-          <FcGoogle onClick={() => googleSignIn()} className= "w-10 cursor-pointer h-10 animation-child" />
-          <FaGithub className="w-10 cursor-pointer h-10 animation-child" />
-          </div>
         </div>
       </div>
     </>
