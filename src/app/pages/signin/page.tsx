@@ -1,26 +1,30 @@
 "use client"
-import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation'; 
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { data: session } = useSession();
   const router = useRouter();
 
   useEffect(() => {
     document.title = 'Sign In - Counter Pick';
-  }, []);
+    if (session) {
+      router.push('/pages/Hero'); 
+    }
+  }, [session]);
 
   const notifySuccess = () => toast.success("Logged in!", { autoClose: 100000 });
-  const notifyError =  () => toast.error("Sign in failed.", { autoClose: 3000 });
+  const notifyError = () => toast.error("Sign in failed.", { autoClose: 3000 });
 
   const handleSignIn = async () => {
     const result = await signIn('credentials', { email, password, redirect: false });
     if (result?.error) {
-      notifyError(); 
+      notifyError();
     } else {
       notifySuccess();
       router.push('/pages/Hero');
@@ -47,7 +51,7 @@ export default function Signin() {
           <div className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
-                Email 
+                Email
               </label>
               <div className="mt-2">
                 <input
@@ -80,7 +84,7 @@ export default function Signin() {
                   type="password"
                   autoComplete="current-password"
                   onChange={(e) => setPassword(e.target.value)}
-                  onKeyPress={handleKeyPress} // Add event listener for key press
+                  onKeyPress={handleKeyPress}
                   required
                   className="block w-full pl-4 rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                 />
@@ -106,5 +110,5 @@ export default function Signin() {
         </div>
       </div>
     </>
-  )
+  );
 }

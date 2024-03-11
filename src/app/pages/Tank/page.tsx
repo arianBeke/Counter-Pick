@@ -1,4 +1,3 @@
-"use client"
 import Navbar from "../../components/Navbar/page"
 import Link from 'next/link'
 
@@ -20,7 +19,7 @@ const heroes = [
     {
       name: 'JUNKER QUEEN',
       role: 'Aggresive Tank',
-      pageRoute: '/pages/Heroes/Dva',
+      pageRoute: '/pages/Heroes/JunkerQueen',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cef2406b2244b80506f83b8fb9ebaf214f41fa8795cbeef84026cd8018561d04.png',
     },

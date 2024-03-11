@@ -10,13 +10,13 @@ const navigation = [
   { name: 'Tank', href: '../../pages/Tank' },
   { name: 'Damage', href: '../../pages/Damage' },
   { name: 'Support', href: '../../pages/Support' },
-  { name: 'Favorites', href: '../../pages/Hero' },
+  { name: 'Favorites', href: '../../pages/Favorites' },
 ];
 const mobileNavigation = [
   { name: 'Tank', href: '../../pages/Tank' },
   { name: 'Damage', href: '../pages/Damage' },
   { name: 'Support', href: '../pages/Support' },
-  { name: 'Favorites', href: '../pages/Hero' },
+  { name: 'Favorites', href: '../pages/Favorites' },
 ];
 
 export default function Navbar() {

@@ -126,6 +126,7 @@ export default function Example() {
                     Birthday: May 25 <span className="text-[#00df9a]" >(Age: 47)</span>
                   </p>
                 </div>
+                <likeButton />
               </li>
             ))}
           </ul>
