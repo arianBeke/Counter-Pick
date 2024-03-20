@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); 
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -35,6 +36,11 @@ export default function Signin() {
     if (event.key === 'Enter') {
       handleSignIn();
     }
+  };
+
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -77,17 +83,28 @@ export default function Signin() {
                   </div>
                 </div>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={showPassword ? 'text' : 'password'} 
                   autoComplete="current-password"
                   onChange={(e) => setPassword(e.target.value)}
                   onKeyPress={handleKeyPress}
                   required
                   className="block w-full pl-4 rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                 />
+                <button
+                  type="button"
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-white"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? (
+                    <img src="https://www.svgrepo.com/show/380010/eye-password-show.svg" alt="Show Password" className="h-5 w-6" />
+                  ) : (
+                    <img src="https://www.svgrepo.com/show/380007/eye-password-hide.svg" alt="Show Password" className="h-5  w-6" />
+                  )}
+                </button>
               </div>
             </div>
             <div>
