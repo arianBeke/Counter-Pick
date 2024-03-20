@@ -26,50 +26,56 @@ const heroes = [
     {
       name: 'ORISA',
       role: 'Aggresive Tank',
-      pageRoute: '/pages/Heroes/Dva',
+      pageRoute: '/pages/Heroes/Orisa',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71e96294617e81051d120b5d04b491bb1ea40e2933da44d6631aae149aac411d.png',
     },
     {
       name: 'RAMATTRA',
       role: 'Shield Tank',
-      pageRoute: '/pages/Heroes/Dva',
+      pageRoute: '/pages/Heroes/Ramattra',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e0367155e1940a24da076c6f1f065aacede88dbc323631491aa0cd5a51e0b66.png',
     },
     {
       name: 'REINHARDT',
       role: 'Shield Tank',
+      pageRoute: '/pages/Heroes/Reinhardt',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/490d2f79f8547d6e364306af60c8184fb8024b8e55809e4cc501126109981a65.png',
     },
     {
       name: 'ROADHOG',
       role: 'Aggresive Tank',
+      pageRoute: '/pages/Heroes/Roadhog',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/72e02e747b66b61fcbc02d35d350770b3ec7cbaabd0a7ca17c0d82743d43a7e8.png',
     },
     {
       name: 'SIGMA',
       role: 'Shield Tank',
+      pageRoute: '/pages/Heroes/Sigma',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cd7a4c0a0df8924afb2c9f6df864ed040f20250440c36ca2eb634acf6609c5e4.png',
     },
     {
       name: 'WINSTON',
       role: 'Dive Tank',
+      pageRoute: '/pages/Heroes/Winston',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd9c8e634d89488459dfc1aeb21b602fa5c39aa05601a4167682f3a3fed4e0ee.png',
     },
     {
       name: 'WRECKING BALL',
       role: 'Dive Tank',
+      pageRoute: '/pages/Heroes/WreckingBall',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5c18e39ce567ee8a84078f775b9f76a2ba891de601c059a3d2b46b61ae4afb42.png',
     },
     {
       name: 'ZARYA',
       role: 'Aggresive Tank',
+      pageRoute: '/pages/Heroes/Zarya',
       imageUrl:
         'https://d15f34w2p8l1cc.cloudfront.net/overwatch/8819ba85823136640d8eba2af6fd7b19d46b9ee8ab192a4e06f396d1e5231f7a.png',
     },
