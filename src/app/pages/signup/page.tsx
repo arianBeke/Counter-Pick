@@ -21,6 +21,7 @@ export default function Signup() {
         setPasswordAgain("");
         setError("");
         notify(); 
+        router.push('/pages/signin');
       })
       .catch((error) => {
         console.error('Signup failed:', error.message);
